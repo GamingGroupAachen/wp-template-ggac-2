@@ -1,0 +1,27 @@
+{
+  "name": "Gaming Group Aachen",
+  "version": "0.0.0",
+  "authors": [],
+  "description": "Gaming Group",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Gaming",
+    "Aachen"
+  ],
+  "license": "GPLv2",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "fontawesome#~4.5.0",
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}
