@@ -1,51 +1,67 @@
 <?php
 /**
- * The loop that displays posts
- *
- * The loop displays the posts and the post content. See
- * https://codex.wordpress.org/The_Loop to understand it and
- * https://codex.wordpress.org/Template_Tags to understand
- * the tags used in it.
- *
- * This can be overridden in child themes with loop.php or
- * loop-template.php, where 'template' is the loop context
- * requested by a template. For example, loop-index.php would
- * be used if it exists and we ask for the loop with:
- * <code>get_template_part( 'loop', 'index' );</code>
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * The template used for displaying ggac_game content
  */
 ?>
 
-<?php /* If there are no posts to display, such as an empty archive page */ ?>
-<?php if ( ! have_posts() ) : ?>
-	<div id="post-0" class="post error404 not-found">
-		<div class="entry-content">
-			<p>Keine Neuigkeiten vorhanden</p>
-		</div><!-- .entry-content -->
-	</div><!-- #post-0 -->
-<?php endif; ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
 
-<?php
-// Start the loop.
-while ( have_posts() ) : the_post();
+	<?php twentysixteen_post_thumbnail(); ?>
+	
+	<div class="game-meta panel panel-default">
+		<div class="meta-title panel-heading">Snell-Infos</div>
+		<div class="meta-content panel-body">
+			<div class="ingame-group">
+				<div class="meta-label"><?php _e('Chatroom:') ?></div>
+				<div class="meta-innerContent"><?php the_field('ingame_gruppe'); ?></div>
+			</div>
+			<div class="mailinglist">
+				<div class="meta-label"><?php _e('Orga:') ?></div>
+				<div class="meta-innerContent"><a href="mailto:<?php the_field('mailingliste'); ?>"><?php the_field('mailingliste'); ?></a></div>
+			</div>
+			<div class="ts_tournament">
+				<div class="meta-label"><?php _e('TS Turnier:') ?></div>
+				<div class="meta-innerContent"><?php the_field('ts_turnierserver'); ?></div>
+			</div>
+			<div class="ts_community">
+				<div class="meta-label"><?php _e('TS Community:') ?></div>
+				<div class="meta-innerContent"><?php the_field('ts_communityserver'); ?></div>
+			</div>
+			<div class="facebook">
+				<div class="meta-label"><?php _e('Facebook:') ?></div>
+				<div class="meta-innerContent"><a href="<?php the_field('facebookgruppe'); ?>">FB-Gruppe</a></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="entry-content">
+		<?php
+		the_content();
+		
+		wp_link_pages( array(
+			'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
+			'after'       => '</div>',
+			'link_before' => '<span>',
+			'link_after'  => '</span>',
+			'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
+			'separator'   => '<span class="screen-reader-text">, </span>',
+		) );
+		?>
+	</div><!-- .entry-content -->
 
-	/*
-	 * Include the Post-Format-specific template for the content.
-	 * If you want to override this in a child theme, then include a file
-	 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-	 */
-	get_template_part( 'template-parts/content', get_post_format() );
+	<?php
+		edit_post_link(
+			sprintf(
+				/* translators: %s: Name of current post */
+				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+				get_the_title()
+			),
+			'<footer class="entry-footer"><span class="edit-link">',
+			'</span></footer><!-- .entry-footer -->'
+		);
+	?>
 
-// End the loop.
-endwhile;
-
-// Previous/next page navigation.
-the_posts_pagination( array(
-	'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-	'next_text'          => __( 'Next page', 'twentysixteen' ),
-	'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-) );
-
+</article><!-- #post-## -->

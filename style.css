@@ -9390,6 +9390,25 @@ hr {
 #ggac-wrapper > .container > .content-area > main article > .post-thumbnail img {
   max-width: 100%;
 }
+#ggac-wrapper > .container > .content-area > main article .game-meta {
+  max-width: 50%;
+  float: right;
+}
+@media (max-width: 991px) {
+  #ggac-wrapper > .container > .content-area > main article .game-meta {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+#ggac-wrapper > .container > .content-area > main article .game-meta .meta-content .meta-label {
+  display: block;
+  float: left;
+  clear: left;
+  width: 120px;
+}
+#ggac-wrapper > .container > .content-area > main article .game-meta .meta-content .meta-innerContent {
+  margin-left: 120px;
+}
 #ggac-wrapper > .container > .content-area > main article > footer {
   position: relative;
 }
