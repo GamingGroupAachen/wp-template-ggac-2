@@ -38,30 +38,34 @@ get_header(); ?>
 
 		<h2 class="entry-title">Aktuelles zu <?= get_the_title() ?></h2>
 		<?php
-			query_posts( array( 'tag__in' => get_field('tag') ) );
+			$no_news = true;
+			if (get_field('tag')) :
+				query_posts( array( 'tag__in' => get_field('tag') ) );
+
+				// Start the loop.
+				while ( have_posts() ) : the_post();
+
+					/*
+					 * Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', get_post_format() );
+					
+					$no_news = false; // there are news
+
+				// End the loop.
+				endwhile;
+			endif;
 			
 			/* If there are no posts to display, such as an empty archive page */
-			if ( ! have_posts() ) : ?>
+			if ( $no_news ) : ?>
 				<div id="post-0" class="post error404 not-found">
 					<div class="entry-content">
 						<p>Keine Neuigkeiten vorhanden</p>
 					</div><!-- .entry-content -->
 				</div><!-- #post-0 -->
-			<?php endif; ?>
-
-			<?php
-			// Start the loop.
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			// End the loop.
-			endwhile;
+			<?php endif;
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
