@@ -130,6 +130,7 @@
 							}
 							.meta-innerContent{
 								margin-left: 120px;
+								height: @line-height-computed;
 							}
 						}
 					}
@@ -265,6 +266,19 @@
 										top: 0;
 										left: 0;
 									}
+									.comment-metadata{
+										> a {
+											display: block;
+											float: left;
+											padding-right: 5px;
+											margin-right: 5px;
+											border-right: 1px solid @navbar-inverse-bg;
+											&:last-child{
+												border-right: none;
+											}
+										}
+									}
+									
 								}
 							}
 							.comment-respond{
@@ -346,7 +360,7 @@
 								.fa();
 								font-size: 12px;
 								display: block;
-								line-height: @line-height-base;
+								line-height: @line-height-computed;
 							}
 							&:hover{
 								text-decoration: underline;
@@ -415,7 +429,7 @@
 					
 					.site-info-title{
 						float: left;
-						line-height: 20px;
+						line-height: @line-height-computed;
 						margin-top: 10px;
 						margin-left: 10px;
 					}

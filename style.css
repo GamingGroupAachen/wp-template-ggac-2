@@ -9408,6 +9408,7 @@ hr {
 }
 #ggac-wrapper > .container > .content-area > main article .game-meta .meta-content .meta-innerContent {
   margin-left: 120px;
+  height: 20px;
 }
 #ggac-wrapper > .container > .content-area > main article > footer {
   position: relative;
@@ -9629,6 +9630,18 @@ hr {
   position: absolute;
   top: 0;
   left: 0;
+}
+#ggac-wrapper > .container > .content-area > main .comments-area ol .comment article footer.comment-meta .comment-metadata > a,
+#ggac-wrapper > .container > .content-area > main .comments-area .comment-list .comment article footer.comment-meta .comment-metadata > a {
+  display: block;
+  float: left;
+  padding-right: 5px;
+  margin-right: 5px;
+  border-right: 1px solid #222222;
+}
+#ggac-wrapper > .container > .content-area > main .comments-area ol .comment article footer.comment-meta .comment-metadata > a:last-child,
+#ggac-wrapper > .container > .content-area > main .comments-area .comment-list .comment article footer.comment-meta .comment-metadata > a:last-child {
+  border-right: none;
 }
 #ggac-wrapper > .container > .content-area > main .comments-area ol .comment .comment-respond,
 #ggac-wrapper > .container > .content-area > main .comments-area .comment-list .comment .comment-respond {
@@ -9954,7 +9967,7 @@ fieldset[disabled] #ggac-wrapper > .container > .content-area > main .comments-a
   -moz-osx-font-smoothing: grayscale;
   font-size: 12px;
   display: block;
-  line-height: 1.42857143;
+  line-height: 20px;
 }
 #ggac-wrapper > .container > .content-area > main .post-navigation .nav-links a:before.fa-pull-left {
   margin-right: .3em;
