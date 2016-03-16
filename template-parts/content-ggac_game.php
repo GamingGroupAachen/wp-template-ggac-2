@@ -28,7 +28,6 @@
 		if($nonEmptyField) :
 		?>
 		<div class="game-meta panel panel-default">
-			<div class="meta-title panel-heading">Snell-Infos</div>
 			<div class="meta-content panel-body">
 				<?php foreach($boxFields as $key => $value) :  ?>
 				<?php
