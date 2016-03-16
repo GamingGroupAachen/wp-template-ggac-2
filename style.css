@@ -9291,12 +9291,22 @@ hr {
   width: 100%;
   top: 0;
   left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 2;
   padding-top: 56.25%;
   background-image: url('media/img/rwthgg-wallpaper-anivia.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   margin-top: -12%;
+  max-width: 1300px;
+}
+@media (min-width: 1300px) {
+  #ggac-wrapper > .ggac-header-bg {
+    padding-top: 731.25px;
+    margin-top: -156px;
+  }
 }
 #ggac-wrapper > .ggac-header-bg a {
   display: block;
@@ -9315,6 +9325,11 @@ hr {
   margin-top: 25%;
   z-index: 4;
   padding: 0;
+}
+@media (min-width: 1300px) {
+  #ggac-wrapper > .container.container-navbar {
+    margin-top: 325px;
+  }
 }
 #ggac-wrapper > .container.container-navbar .navbar {
   border-radius: 0;
