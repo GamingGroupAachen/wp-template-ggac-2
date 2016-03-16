@@ -9434,6 +9434,15 @@ hr {
 #ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-bar-disabled {
   display: none;
 }
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-sub-nav {
+  padding: 0;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-sub-nav .tribe-events-nav-left {
+  float: right;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-sub-nav .tribe-events-nav-right {
+  float: right;
+}
 #ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .tribe-events-list-separator-month {
   display: none;
 }
