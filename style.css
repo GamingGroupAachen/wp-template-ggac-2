@@ -9388,6 +9388,12 @@ hr {
 #ggac-wrapper > .container > .content-area > main article:after {
   clear: both;
 }
+#ggac-wrapper > .container > .content-area > main article.page.post-0 {
+  border-top: 0;
+  background-color: white;
+  padding: 0;
+  margin-bottom: 0;
+}
 #ggac-wrapper > .container > .content-area > main article > header h2 {
   margin-top: 0;
   font-size: 28px;
@@ -9424,6 +9430,101 @@ hr {
 #ggac-wrapper > .container > .content-area > main article .game-meta .meta-content .meta-innerContent {
   margin-left: 120px;
   height: 20px;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-bar-disabled {
+  display: none;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .tribe-events-list-separator-month {
+  display: none;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events {
+  border-top: 5px solid #222222;
+  background-color: #eee;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events:before,
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events:after {
+  content: " ";
+  display: table;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events:after {
+  clear: both;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events:before,
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events:after {
+  content: " ";
+  display: table;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events:after {
+  clear: both;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events > h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events > h2 a {
+  color: black;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events .tribe-events-event-cost {
+  float: right;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-loop .type-tribe_events .tribe-events-event-cost::before {
+  content: "Eintritt: ";
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single {
+  border-top: 5px solid #222222;
+  background-color: #eee;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single:before,
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single:after {
+  content: " ";
+  display: table;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single:after {
+  clear: both;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single:before,
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single:after {
+  content: " ";
+  display: table;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single:after {
+  clear: both;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single > h1 {
+  margin-top: 0;
+  font-size: 28px;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single > h1 a {
+  color: black;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single .tribe-events-schedule h2,
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single .tribe-events-schedule > * {
+  display: block;
+  float: left;
+  line-height: 1.1;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single .tribe-events-schedule .tribe-events-cost::before {
+  content: 'Eintritt: ';
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single .tribe-events-back,
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single .tribe-events-notices,
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single #tribe-events-header,
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single .tribe-events-cal-links,
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single .tribe-events-event-meta,
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-single #tribe-events-footer {
+  display: none;
+}
+#ggac-wrapper > .container > .content-area > main article > .entry-content .tribe-events-ical {
+  display: none;
 }
 #ggac-wrapper > .container > .content-area > main article > footer {
   position: relative;
