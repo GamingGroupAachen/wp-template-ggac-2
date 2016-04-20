@@ -9279,6 +9279,9 @@ blockquote {
 hr {
   border-color: #ccc;
 }
+body {
+  background-color: black;
+}
 #ggac-wrapper {
   position: relative;
   padding-top: 1px;
